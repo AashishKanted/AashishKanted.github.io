@@ -1,229 +1,322 @@
-<!-- index.html -->
-<header>
-    <!-- Google tag (gtag.js) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aashish Kanted</title>
+
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y7QNGKQWTZ"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-Y7QNGKQWTZ');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-Y7QNGKQWTZ');
     </script>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav id="nav">
+        <div class="nav-inner">
+            <a href="#hero" class="nav-logo">AK</a>
+            <div class="nav-right">
+                <div class="nav-links">
+                    <a href="#about">About</a>
+                    <a href="#projects">Work</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                    <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="hero">
+        <canvas id="hero-canvas"></canvas>
+        <div class="hero-content">
+            <p class="hero-label reveal-hero">Autonomy &amp; Controls</p>
+            <h1 class="hero-name reveal-hero">
+                <span class="name-line">Aashish</span>
+                <span class="name-line">Kanted</span>
+            </h1>
+            <p class="hero-sub reveal-hero">Building robots that navigate the real world.</p>
+        </div>
+        <div class="scroll-indicator reveal-hero">
+            <span class="scroll-text">Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+        <div class="section-inner">
+            <div class="about-grid">
+                <div class="about-image-wrap reveal">
+                    <img src="assets/profile_picture.jpeg" alt="Aashish Kanted" class="about-image">
+                </div>
+                <div class="about-content">
+                    <p class="section-label reveal">About</p>
+                    <p class="about-lead reveal">Autonomy engineer. Studied EEE and Physics at BITS Pilani &mdash; because one degree wasn't enough to hold the curiosity.</p>
+                    <p class="about-body reveal">At work, I gravitate toward the problems that sit between teams &mdash; the ones that fall through the cracks. I've driven AMR reliability across autonomy, controls, and perception stacks, turning fragile handoffs into systems that actually hold up on factory floors.</p>
+                    <p class="about-body reveal">When I'm not debugging trajectories: Ultimate Frisbee and surfing.</p>
+                    <div class="about-tags reveal">
+                        <span class="tag">Robotics</span>
+                        <span class="tag">Control Systems</span>
+                        <span class="tag">Embedded Systems</span>
+                        <span class="tag">Computer Vision</span>
+                        <span class="tag">SLAM</span>
+                        <span class="tag">Motion Planning</span>
+                        <span class="tag">Autonomous Systems</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy -->
+    <section id="philosophy">
+        <div class="section-inner">
+            <blockquote class="philosophy-quote reveal">
+                <p>In 1998, Hurricane Mitch hit Honduras. The Choluteca Bridge &mdash; engineered to withstand anything &mdash; survived perfectly. But the hurricane moved the entire river. The bridge stood intact, leading nowhere.</p>
+                <footer>Don't just build to last. <strong>Build to adapt.</strong></footer>
+            </blockquote>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+        <div class="section-inner">
+            <p class="section-label reveal">Selected Work</p>
+            <div class="projects-grid">
+
+                <!-- Featured: Kratos -->
+                <article class="project-card featured reveal">
+                    <div class="project-card-image">
+                        <img src="assets/kratos1.JPG" alt="Project Kratos — Mars Rover">
+                    </div>
+                    <div class="project-card-body">
+                        <h3 class="project-title">Project Kratos</h3>
+                        <p class="project-subtitle">Mars Rover &mdash; Robotic Arm Lead</p>
+                        <p class="project-desc">Led the arm team for a Mars rover. 5 DOF, lifts 8kg, precise enough to insert a USB stick. Custom PID controller, inverse kinematics, and autonomous grasping with RealSense + MoveIt ROS.</p>
+                        <div class="project-tags">
+                            <span>ROS</span>
+                            <span>PID Control</span>
+                            <span>Computer Vision</span>
+                            <span>Inverse Kinematics</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Kratos-The-Rover" target="_blank">GitHub &#x2197;</a>
+                            <a href="https://youtu.be/-5alpsdGXH8?si=B1DDv0LMCFGnHUI_" target="_blank">Video &#x2197;</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- LMPC -->
+                <article class="project-card reveal">
+                    <div class="project-card-image">
+                        <img src="assets/LeMPC_banner.png" alt="Learning MPC for AMRs" loading="lazy">
+                    </div>
+                    <div class="project-card-body">
+                        <h3 class="project-title">Learning MPC</h3>
+                        <p class="project-subtitle">Ati Motors</p>
+                        <p class="project-desc">MPC framework for autonomous mobile robots that learns from previous runs to improve trajectory tracking in real-time. Ended up cutting tracking error by 75% and letting the robots move faster through factory floors.</p>
+                        <div class="project-tags">
+                            <span>MPC</span>
+                            <span>Controls</span>
+                            <span>Python</span>
+                            <span>AMR</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://atimotors.com/how-lempc-powers-factory-automation/" target="_blank">Blog &#x2197;</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Trolley Tracking -->
+                <article class="project-card reveal">
+                    <div class="project-card-image">
+                        <img src="assets/trolley_tracking.gif" alt="Trolley Reflector Detection & Tracking" loading="lazy">
+                    </div>
+                    <div class="project-card-body">
+                        <h3 class="project-title">Trolley Reflector Tracking</h3>
+                        <p class="project-subtitle">Ati Motors</p>
+                        <p class="project-desc">LiDAR-based pipeline for detecting trolleys via reflective strips and tracking their motion with an EKF. Computes swept paths and exclusion zones so the AMR knows where not to drive.</p>
+                        <div class="project-tags">
+                            <span>LiDAR</span>
+                            <span>EKF</span>
+                            <span>Perception</span>
+                            <span>Safety</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- R.A.I.N. -->
+                <article class="project-card reveal">
+                    <div class="project-card-image">
+                        <img src="assets/Trotbot.jpg" alt="R.A.I.N.">
+                    </div>
+                    <div class="project-card-body">
+                        <h3 class="project-title">R.A.I.N.</h3>
+                        <p class="project-subtitle">Autonomous Indoor Navigation</p>
+                        <p class="project-desc">Holonomic drive robot with obstacle avoidance, omnidirectional control, and global/local PID controllers.</p>
+                        <div class="project-tags">
+                            <span>Holonomic Drive</span>
+                            <span>PID</span>
+                            <span>Path Planning</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/ERC-BPGC/RAIN" target="_blank">GitHub &#x2197;</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Fuzzy Logic -->
+                <article class="project-card reveal">
+                    <div class="project-card-image">
+                        <img src="assets/fuzzy_animation.gif" alt="Fuzzy Logic Rocket Controller">
+                    </div>
+                    <div class="project-card-body">
+                        <h3 class="project-title">Fuzzy Logic Rocket</h3>
+                        <p class="project-subtitle">Self-Landing Thrust Vector Control</p>
+                        <p class="project-desc">Fuzzy logic controller for model rocket thrust vectoring. MATLAB simulation deployed to microcontroller with optimized latency.</p>
+                        <div class="project-tags">
+                            <span>Fuzzy Logic</span>
+                            <span>MATLAB</span>
+                            <span>Embedded</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/AashishKanted/Fuzzfication" target="_blank">GitHub &#x2197;</a>
+                            <a href="https://docs.google.com/document/d/1ygWkYz8e-yeEb4Df1HVqFvExaOEIY6_xfL-tauSgcI8/edit?tab=t.0" target="_blank">Paper &#x2197;</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Autonomous Buggy -->
+                <article class="project-card reveal">
+                    <div class="project-card-image">
+                        <img src="assets/autonomous_buggy.jpg" alt="Autonomous Buggy">
+                    </div>
+                    <div class="project-card-body">
+                        <h3 class="project-title">Autonomous Buggy</h3>
+                        <p class="project-subtitle">Self-Driving Campus Shuttle</p>
+                        <p class="project-desc">Lane detection for rain and low-light conditions. RTK GNSS with custom receiver board for precision navigation.</p>
+                        <div class="project-tags">
+                            <span>Lane Detection</span>
+                            <span>RTK GNSS</span>
+                            <span>Autonomous</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/BITSAuto" target="_blank">GitHub &#x2197;</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Sales Forecasting -->
+                <article class="project-card reveal">
+                    <div class="project-card-image">
+                        <img src="assets/sales forecasting.png" alt="Warehouse Forecasting">
+                    </div>
+                    <div class="project-card-body">
+                        <h3 class="project-title">Demand Forecasting</h3>
+                        <p class="project-subtitle">Warehouse Management System</p>
+                        <p class="project-desc">Stock management with Prophet-based demand forecasting for automated reorder predictions.</p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>Prophet</span>
+                            <span>Forecasting</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/AashishKanted/Sales_Forecasting" target="_blank">GitHub &#x2197;</a>
+                            <a href="https://docs.google.com/document/d/1jR-Ks55kvt6-3RIJqk0sLCL311b7HOWpavsHLspHIwQ/edit?tab=t.0" target="_blank">Docs &#x2197;</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience">
+        <div class="section-inner">
+            <p class="section-label reveal">Experience</p>
+            <div class="exp-list">
+                <div class="exp-item reveal">
+                    <div class="exp-left">
+                        <h3 class="exp-org">Ati Motors</h3>
+                        <p class="exp-role">Autonomy &amp; Controls Engineer</p>
+                    </div>
+                    <p class="exp-desc">Autonomy and controls for AMRs in factory environments. LMPC, LiDAR perception, trolley tracking, sensor fusion. Bangalore.</p>
+                    <p class="exp-date">Jun 2025 &mdash; Present</p>
+                </div>
+                <div class="exp-item reveal">
+                    <div class="exp-left">
+                        <h3 class="exp-org">Crystal Ball</h3>
+                        <p class="exp-role">Embedded Systems Designer</p>
+                    </div>
+                    <p class="exp-desc">Custom PPK-RTK GPS module &mdash; Wi-Fi, eMMC, ublox GNSS, STM32. Full firmware and driver stack.</p>
+                    <p class="exp-date">May &mdash; Jul 2024</p>
+                </div>
+                <div class="exp-item reveal">
+                    <div class="exp-left">
+                        <h3 class="exp-org">Quark Summer Projects</h3>
+                        <p class="exp-role">Mentor</p>
+                    </div>
+                    <p class="exp-desc">Mentored 160 students over two months on Arduino, Python, ROS, and PCB design.</p>
+                    <p class="exp-date">May &mdash; Jul 2023</p>
+                </div>
+                <div class="exp-item reveal">
+                    <div class="exp-left">
+                        <h3 class="exp-org">Project Kratos</h3>
+                        <p class="exp-role">Robotic Arm Lead</p>
+                    </div>
+                    <p class="exp-desc">Led design, manufacturing, and integration of 5 DOF rover arm system. Team management and cross-subsystem collaboration.</p>
+                    <p class="exp-date">2023 &mdash; 2024</p>
+                </div>
+                <div class="exp-item reveal">
+                    <div class="exp-left">
+                        <h3 class="exp-org">Sandbox Innovation Lab</h3>
+                        <p class="exp-role">Inventory Head</p>
+                    </div>
+                    <p class="exp-desc">BITS Goa's innovation incubation center. Oversaw resources for student engineering projects.</p>
+                    <p class="exp-date">2023 &mdash; 2024</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <div class="section-inner contact-inner">
+            <p class="section-label reveal">Get in Touch</p>
+            <h2 class="contact-heading reveal">Let's talk.</h2>
+            <a href="mailto:aakanted@gmail.com" class="contact-email reveal">aakanted@gmail.com</a>
+            <div class="contact-links reveal">
+                <a href="https://www.linkedin.com/in/aashish-kanted-7a3707225/" target="_blank">LinkedIn &#x2197;</a>
+                <a href="https://github.com/AashishKanted" target="_blank">GitHub &#x2197;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="section-inner">
+            <p class="footer-text">Aashish Kanted</p>
+        </div>
+    </footer>
+
     <script src="script.js"></script>
-    <div class="toggle-container">
-        <label class="switch">
-          <input type="checkbox" id="toggle-dark-mode">
-          <span class="slider round">
-            <span class="slider-icon light-mode-icon">☀</span> <!-- Sun Icon -->
-            <span class="slider-icon dark-mode-icon">🌙</span> <!-- Moon Icon -->
-          </span>
-        </label>
-      </div>
-    
-    <div class="container header-container">
-        <h1><span class="typing-effect">Aashish Kanted</span></h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-
-<section id="about">
-    <div class="container about-section">
-        <img src="assets/profile_picture.jpeg" alt="Aashish" class="profile-image">
-        <div class="about-text">
-            <h2>About Me</h2>
-            <p>Hey there! I'm Aashish, an engineer-in-the-making at BITS Pilani, Goa campus. When I'm not sleeping or studying (which is... occasionally), you can find me building something, solving problems, or maybe just daydreaming about the next big invention.</p>
-            
-            <p>I’ve always been that person who takes things apart just to see how they work (sorry, brother your RC cars never stood a chance). Whether it's tinkering with electronics or trying to figure out how to make my robot smarter, I'm all about diving into the details. But don’t worry—I’m also known for keeping things light and fun.</p>
-            
-            <p>Outside of engineering, I’m probably on the Ultimate Frisbee field, catching some air (both literally and figuratively). I firmly believe in the power of a good challenge, whether it's on the field or in the world of robotics.</p>
-            
-            <p>So, if you're looking for someone who’s passionate, curious, and always up for a challenge—whether it's building something or just having a good chat—I'm your person!</p>
-        </div>
-    </div>
-</section>
-
-<section id="projects">
-    <div class="container">
-        <h2>My Projects</h2>
-        <div class="project-grid">
-            <!-- Example Project Entry -->
-            <div class="project-entry">
-                <img src="assets/kratos1.JPG" alt="Project Kratos" class="project-image">
-                <div class="project-details">
-                    <h3>Project Kratos - Mars Rover</h3>
-                    <p>Led the robotic arm team to design, program, and implement a 5 DoF robotic arm for the Mars rover, capable fo lifting 8kgs and precise enough to insert a usb stick.
-                    </br>• Developed a custom PID controller and implemented inverse kinematics.
-                    </br>• Autonomous Arm: Utilized Hall effect and IMU sensors to localize the end effector, and a RealSense camera to
-                        localize objects in space. Used MoveitROS for motion planning and grasp generation for known tasks.</p>
-                    <a href="https://github.com/Kratos-The-Rover" class="project-link" target="_blank">Code</a>
-                    <a href="https://youtu.be/-5alpsdGXH8?si=B1DDv0LMCFGnHUI_" class="project-link" target="_blank">Video</a>
-                </div>
-            </div>
-            <!-- Repeat for each project -->
-            <div class="project-entry">
-                <img src="assets/Trotbot.jpg" alt="R.A.I.N" class="project-image">
-                <div class="project-details">
-                    <h3>R.A.I.N - Autonomous Indoor Navigation Robot</h3>
-                    <p>• Developed a holonomic drive, autonomous indoor navigation robot.  (2021– 2023)
-                    </br>• Implemented a basic obstacle avoidance algorithm and low-level planning and control for an
-                        omnidirectional robot, along with a global and local PID controller for the holonomic drive.</p>
-                    <a href="https://github.com/ERC-BPGC/RAIN" class="project-link" target="_blank">Code</a>
-                </div>
-            </div>
-            <div class="project-entry">
-                <img src="assets/fuzzy_animation.gif" alt="Fuzzy Logic" class="project-image">
-                <div class="project-details">
-                    <h3>Fuzzy Logic Implementation to Control Thrust Vector of a Self-Landing Rocket</h3>
-                    <p>• Simulated and prototyped a fuzzy logic controller to control the thrust vector for a model self-landing rocket.
-                    </br>• MATLAB Implementation: Modeled the rocket plant and thrust vector controller on MATLAB, and implemented it
-                        on a microcontroller with low latency.
-                    </br>• Testing: Compared different implementation methods by pre-computing the fuzzy surface to minimize latency on the
-                        microcontroller.</p>
-                    <a href="https://github.com/AashishKanted/Fuzzfication" class="project-link" target="_blank">Code</a>
-                    <a href="https://docs.google.com/document/d/1ygWkYz8e-yeEb4Df1HVqFvExaOEIY6_xfL-tauSgcI8/edit?tab=t.0" class="project-link" target="_blank">PDF</a>
-                </div>
-            </div>
-            <div class="project-entry">
-                <img src="assets/autonomous_buggy.jpg" alt="Autonomous Buggy" class="project-image">
-                <div class="project-details">
-                    <h3>Autonomous Buggy</h3>
-                    <p> • Working on developing a self-driving campus shuttle. (August 2024)
-                    </br>• Currently implementing different lane detection models to improve reliability during rain and low light conditions.
-                    </br>• Used RTK with a custom GNSS receiver board to improve accuracy and latency. (2024).</p>
-                    <a href="https://github.com/BITSAuto" class="project-link" target="_blank">Code</a>
-                </div>
-            </div>
-            <div class="project-entry">
-                <img src="assets/sales forecasting.png" alt="Forecasting" class="project-image">
-                <div class="project-details">
-                    <h3>Forecasting - Warehouse Management System</h3>
-                    <p>Developed a system to manage stock quantities and reorder dates using Prophet in Python (05/2023 - 07/2023).</p>
-                    <a href="https://github.com/AashishKanted/Sales_Forecasting" class="project-link" target="_blank">Code</a>
-                    <a href="https://docs.google.com/document/d/1jR-Ks55kvt6-3RIJqk0sLCL311b7HOWpavsHLspHIwQ/edit?tab=t.0" class="project-link" target="_blank">Doc</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="experience">
-    <div class="container">
-        <h2>Experience</h2>
-        <div class="experience-item">
-            <div class="experience-logo-title">
-                <img src="assets/crystal ball.png" alt="Company Logo" class="company-logo">
-                <div class="company-title">
-                    <h3 class="company-name">Crystal Ball</h3>
-                </div>
-            </div>
-            <div class="experience-details" style="margin-left: 20px;">
-                <div class="position-details">
-                    <p class="position-title">Embedded Systems Designer</p>
-                    <p class="position-dates">May 2024 - Jul 2024</p>
-                </div>
-                <p class="experience-location">Hyderabad, India</p>
-                <p class="experience-description">Researched and designed a custom PPK-RTK capable GPS module. The module combined SoCs for Wi-Fi, eMMC, ublox GNSS, and STM32. Also wrote complete firmware and libraries to interface these components.</p>
-            </div>
-        </div>
-        <div class="experience-item">
-            <div class="experience-logo-title">
-                <img src="assets/kratosbitsgoa_logo.jpeg" alt="Company Logo" class="company-logo">
-                <div class="company-title">
-                    <h3 class="company-name">Project Kratos</h3>
-                </div>
-            </div>
-            <div class="experience-details">
-                <div class="position-details">
-                    <p class="position-title">Robotic Arm Lead</p>
-                    <p class="position-dates">May 2023 - Present</p>
-                </div>
-                <p class="experience-description">• Managed a team to design and improve robotic arm components through research and close collaboration with other
-                    subsystems.
-                    </br>• Led the manufacturing, fabrication, and integration of essential rover components.</p>
-                <div class="position-details">
-                    <p class="position-title">Core Member</p>
-                    <p class="position-dates">Sep 2022 - May 2023</p>
-                </div>
-            </div>
-        </div>
-        <div class="experience-item">
-            <div class="experience-logo-title">
-                <img src="assets/sandbox_innovation_lab_logo.jpeg" alt="Company Logo" class="company-logo">
-                <div class="company-title">
-                    <h3 class="company-name">Sandbox Innovation Lab</h3>
-                </div>
-            </div>
-            <div class="experience-details">
-                <div class="position-details">
-                    <p class="position-title">Inventory Head</p>
-                    <p class="position-dates">Aug 2023 - Aug 2024</p>
-                </div>
-                <p class="experience-description">Head of committee in Sandbox Lab, BITS Goa's innovation incubation center. 
-                </br>Oversaw inventory management and facilitated innovative student projects by providing resources and guidance.</p>
-                <div class="position-details">
-                    <p class="position-title">Committee Member</p>
-                    <p class="position-dates">Jan 2023 - Aug 2023</p>
-                </div>
-            </div>
-        </div>
-        <div class="experience-item">
-            <div class="experience-logo-title">
-                <img src="assets/ERC_logo.jpeg" alt="Company Logo" class="company-logo">
-                <div class="company-title">
-                    <h3 class="company-name">Electronics and Robotics Club</h3>
-                </div>
-            </div>
-            <div class="experience-details">
-                <div class="position-details">
-                    <p class="position-title">Core Member</p>
-                    <p class="position-dates">May 2022 - Present</p>
-                </div>
-                <p class="experience-description">Worked on the control system of an autonomous holonomic robot, focusing on improving the precision and accuracy of navigation and interaction.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="skills">
-    <div class="container">
-        <h2>Skills & Relevant Courses</h2>
-        <p><strong>Technical Skills:</strong> Robotics, SLAM, Control Systems, Computer Vision, Embedded Systems, Motion Planning, Path Planning, Autonomous Systems, etc.</p>
-        <p><strong>Relevant Courses:</strong> Control Systems, Embedded Systems, Microelectronics, Microprocessors, Analog and Digital Design, Signals and Systems, Power Electronics, Classical Mechanics, Quantum Information and Computing.</p>
-    </div>
-</section>
-
- 
-<!-- <section id="updates">
-    <div class="container">
-        <h2>Updates</h2>
-        <div class="timeline">
-            
-            <div class="timeline-event">
-                <div class="event-date">Feb '23</div>
-                <div class="event-description">Description of the significant event...</div>
-            </div>
-            <div class="timeline-event">
-                <div class="event-date">Feb '23</div>
-                <div class="event-description">Description of the significant event...</div>
-            </div>
-        </div>
-    </div>
-</section> -->
-
-<section id="contact">
-    <div class="container">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:aakanted@gmail.com" class="contact-link" target="_blank">aakanted@gmail.com</a></p>
-        <!-- Add links to your professional profiles -->
-        <a href="https://www.linkedin.com/in/aashish-kanted-7a3707225/" class="contact-link" target="_blank">LinkedIn</a>
-        <a href="https://github.com/AashishKanted" class="contact-link" target="_blank">Github</a>
-    </div>
-</section>
+</body>
+</html>
